@@ -1,0 +1,268 @@
+/* h1 {
+  background: url(../public/assets/img/logo.png);
+} */
+
+:root {
+  --mc: #008850;
+  --sc: #00e085;
+  --wc: #f9f9f9;
+  --dc: #444;
+  --gc: #ddd;
+}
+/* 슬라이드 깜박임 없애기 */
+.swiper-wrapper,
+.swiper-slide {
+  transition-duration: 5ms;
+}
+.inner {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.TopBanner {
+  background: var(--mc);
+  color: var(--wc);
+  overflow: hidden;
+  height: 155px;
+  transition: 0.5s;
+}
+.TopBanner.on {
+  height: 0;
+}
+.TopBanner .inner {
+  padding: 50px 0;
+}
+.TopBanner i {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  font-size: 30px;
+}
+.TopBanner h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.TopBanner span {
+  font-weight: 300;
+  color: var(--sc);
+}
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.Header .hd_wrap {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--wc);
+  line-height: 100px;
+  transition: 0.5s;
+}
+
+.Header.on .hd_wrap {
+  background: var(--wc);
+  color: var(--dc);
+  line-height: 80px;
+}
+
+.Header .hd_wrap:hover {
+  background: var(--wc);
+  color: var(--dc);
+}
+
+.Header h1 {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  font-size: 0;
+}
+
+.Header .hd_wrap h1 a {
+  display: inline-block;
+  font-size: 0;
+  width: 188px;
+  height: 22px;
+  background: url(../public/assets/img/logo_w.png);
+  vertical-align: middle;
+}
+
+.Header .hd_wrap:hover h1 a {
+  background: url(../public/assets/img/logo.png);
+}
+
+.Header.on .hd_wrap h1 a {
+  background: url(../public/assets/img/logo.png);
+}
+.Header .top_service {
+  position: absolute;
+  top: 0;
+  right: 70px;
+}
+
+.Gnb > ul {
+  display: flex;
+  gap: 40px;
+}
+.Gnb > ul > li {
+  position: relative;
+}
+.Gnb > ul > li:hover .submenu::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 150px;
+  background: var(--wc);
+}
+.Gnb .submenu {
+  line-height: 1;
+  position: absolute;
+  color: var(--dc);
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: var(--wc);
+  display: none;
+}
+
+.Header .top_service {
+  display: flex;
+  gap: 40px;
+}
+
+.Header .top_service .project li {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.Header .top_service .project li ~ li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: var(--gc);
+  margin: 0 10px;
+}
+
+.Header .top_service strong {
+  cursor: pointer;
+}
+
+.Header .top_service strong:hover {
+  color: #008850;
+}
+
+.Header .top_service strong.on {
+  color: #008850;
+}
+
+.Header .top_service .lang {
+  position: relative;
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.Header .top_service .lang .arrow {
+  font-size: 7px;
+  vertical-align: 0.3em;
+}
+
+.Header .top_service .lang.on .arrow {
+  transform: rotate(180deg);
+}
+
+.Header .top_service .lang .lang_box {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1.45;
+  border: 2px solid var(--mc);
+  background: var(--lc);
+  color: #444444;
+  padding: 20px 35px;
+}
+
+.Header .top_service .lang.on .lang_box {
+  display: block;
+}
+
+.Header .top_service .top_search {
+  position: relative;
+}
+
+.Header .top_search .search_box {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: -65px;
+  line-height: 1;
+  border: 1px solid var(--gc);
+  background: var(--lc);
+  padding: 30px 50px;
+  width: 600px;
+  text-align: center;
+}
+
+.Header .top_search.on .search_box {
+  display: block;
+}
+
+.Header .top_search .search_box input[type="text"] {
+  font-size: 20px;
+  width: 450px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--dc);
+}
+
+.Header .top_search .search_box button {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 30px;
+}
+
+.Header .top_search .search_box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 60px;
+  width: 20px;
+  height: 20px;
+  background: var(--lc);
+  border-left: 1px solid var(--gc);
+  border-top: 1px solid var(--gc);
+  transform: rotate(45deg);
+}
+.MainVisual {
+  padding-top: 155px;
+}
+.MainVisual figure.item {
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.MainVisual .item01 {
+  background: url(../public/assets/img/main_visual01.jpg);
+}
+.MainVisual .item02 {
+  background: url(../public/assets/img/main_visual02.jpg);
+}
+.MainVisual .item03 {
+  background: url(../public/assets/img/main_visual03.jpg);
+}
+.MainVisual figure .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
